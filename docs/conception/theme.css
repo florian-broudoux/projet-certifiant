@@ -1,0 +1,18 @@
+/* Thème de ClubChallenge – charte du jalon 4 */
+@theme {
+    --color-primaire: #0f1f4b;
+    --color-primaire-survol: #1b2f6e;
+    --color-secondaire: #c2410c;
+    --color-fond: #f4f6fb;
+    --color-fond-surface: #ffffff;
+    --color-texte: #1e293b;
+    --color-texte-secondaire: #475569;
+    --color-bordure: #7490aa;
+    --color-succes: #166534;
+    --color-erreur: #b91c1c;
+
+    --font-titre: "DM Serif Display", serif;
+    --font-texte: "Roboto", sans-serif;
+
+    --radius-carte: 0.75rem;
+}

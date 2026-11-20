@@ -1,0 +1,417 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Supprime l'espace sous l'image (inline par défaut) */
+}
+
+/* Variable pour les couleurs */
+:root {
+    --couleur-fond-page: #f4f6fb;
+    --couleur-fond: #fff;
+    --couleur-principal: #0f1f4b;
+    --couleur-principal-hover: #1b2f6e;
+    --couleur-secondaire: #c2410c;
+    --couleur-secondaire-hover: #9a3412;
+    --couleur-texte: #1e293b;
+    --couleur-texte-secondaire: #475569;
+    --couleur-bordure: #7490AA;
+    --couleur-valid: #166534;
+    --couleur-invalid: #b91c1c;
+}
+
+/* Body qui prend toute la hauteur de l'écran */
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--couleur-fond-page);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100dvh;
+    color: var(--couleur-texte);
+}
+
+/* flex:1 permet au main de prendre toute la hauteur disponible et de laisser le footer en bas de l'écran si page trop courte */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+section {
+    margin: 0 1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+    color: var(--couleur-principal);
+}
+
+h2 {
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header en colonne */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--couleur-principal);
+    color: var(--couleur-fond);
+    padding: 1rem;
+}
+
+.logo {
+    font-family: "DM Serif Display", serif;
+    letter-spacing: 1px;
+    display: flex;
+    gap: 4px;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.emoji {
+    font-size: 1.4em;
+}
+
+.header-nav ul {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header-nav a,
+.footer-nav a {
+    font-size: 1.1rem;
+    padding: 6px 10px;
+}
+
+/* souligne la page active */
+.active {
+    border-bottom: 4px solid var(--couleur-fond);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+}
+
+.title > p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 700px;
+}
+
+.title-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    border: 2px solid var(--couleur-principal);
+    border-radius: 8px;
+    padding: 1em;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.btn-primaire {
+    background-color: var(--couleur-principal);
+    color: var(--couleur-fond);
+}
+
+/* effet hover sur btn */
+.btn-primaire:hover {
+    background-color: var(--couleur-principal-hover);
+}
+
+.btn-secondaire {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-fond);
+}
+
+/* effet hover sur btn */
+.btn-secondaire:hover {
+    background-color: var(--couleur-secondaire-hover);
+}
+
+/* effet hover sur btn */
+.btn-title:hover {
+    transform: translateY(-5px);
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Carte en 1 colonne */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 1200px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 8px;
+    padding: 1em;
+    background-color: var(--couleur-fond);
+    transition: all 0.3s ease;
+}
+
+.emoji-card {
+    display: block;
+}
+
+/* Effet de zoom en hover */
+.card-content:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #f9731680;
+}
+
+.inscription {
+    padding: 1em;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.inscription > legend {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* formulaire en 1 colonne */
+.champs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+}
+
+.champ {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.champ label {
+    font-size: 1.1rem;
+}
+
+.champ input {
+    font: inherit;
+    padding: 0.5em;
+    border: 2px solid var(--couleur-bordure);
+    border-radius: 4px;
+}
+
+.aide {
+    font-size: 0.875rem;
+}
+
+/* Bouton qui prend toute la largeur du formulaire */
+.btn-form {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* Bouton vert si formulaire ok */
+form:valid .btn-form:hover {
+    background-color: var(--couleur-valid);
+    cursor: pointer;
+}
+
+/* Bouton rouge si formulaire invalide */
+form:invalid .btn-form:hover {
+    background-color: var(--couleur-invalid);
+    cursor: not-allowed;
+}
+
+/* Bordure verte quand input correctement remplit */
+input:valid:not(:placeholder-shown) {
+    border-left: 8px solid var(--couleur-valid);
+}
+
+/* Bordure rouge quand input incorrectement remplit */
+input:invalid:not(:placeholder-shown) {
+    border-left: 8px solid var(--couleur-invalid);
+}
+
+.donnees {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.donnees-titre {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.donnees-texte {
+    font-size: 14px;
+}
+
+footer {
+    margin-top: 1.5rem;
+    background-color: var(--couleur-principal);
+}
+
+/* Footer en 1 colonne */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: var(--couleur-fond);
+}
+
+.footer-content p {
+    font-size: 1.2rem;
+    padding-bottom: 0.5em;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Permet de définir la taille des logos des réseaux sociaux */
+.reseau-container {
+    width: 50px;
+    height: 50px;
+    background-color: var(--couleur-fond);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* img prend toute la largeur du container, forme carré */
+.reseau-container > img {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.footer-nav > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Pour navigation au clavier */
+:focus-visible {
+    outline: 3px solid var(--couleur-secondaire);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* Changement de couleur dans le header et footer pour la navigation clavier */
+header :focus-visible, footer :focus-visible {
+    outline: 3px solid var(--couleur-fond);
+}
+
+/* FORMAT TABLETTE MINIMUM, beaucoup de changement flex column -> row */
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .title-btn {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* cartes en 2 colonnes */
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* nombre de carte impair, permet de centrer la dernière */
+    .card-content:last-child {
+        grid-column: 1/-1;
+        justify-self: center;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    .footer-content > p {
+        align-self: center;
+    }
+}
+
+/* FORMAT DESKTOP MINIMUM */
+@media (min-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Annule le centrage de la dernière carte */
+    .card-content:last-child {
+        grid-column: auto;
+    }
+
+    /* Passage à 2 input par ligne dans le formulaire */ 
+    .champs {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+}

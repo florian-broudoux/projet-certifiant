@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ClubChallenge - Accueil</title>
+        <meta
+            name="description"
+            content="ClubChallenge permet à votre club ou à vos amis de lancer des défis sportifs, de saisir leurs performances et de suivre un classement."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="images/icon.jpg" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- HEADER-->
+        <header>
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="emoji" aria-hidden="true">🏆</span>
+                    ClubChallenge
+                </a>
+                <nav class="header-nav">
+                    <ul>
+                        <li>
+                            <a href="#" class="active" aria-current="page"
+                                >Accueil</a
+                            >
+                        </li>
+                        <li><a href="#inscription">Inscription</a></li>
+                        <li><a href="#">Connexion</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <!-- ACCROCHE -->
+            <section class="title">
+                <h1>Défiez votre équipe, battez vos records.</h1>
+                <p>
+                    Lancez des défis à votre club ou à vos amis, saisissez vos
+                    performances et suivez un classement qui se met à jour
+                    automatiquement.
+                </p>
+                <div class="title-btn">
+                    <a href="#" class="btn btn-primaire btn-title"
+                        >Se connecter</a
+                    >
+                    <a href="#inscription" class="btn btn-secondaire btn-title"
+                        >S'inscrire</a
+                    >
+                </div>
+            </section>
+
+            <!-- PRESENTATION AVEC 3 CARTES -->
+            <section class="presentation">
+                <h2>Comment ça marche ?</h2>
+                <div class="cards">
+                    <article class="card-content">
+                        <h3>
+                            Rejoignez ou créez votre groupe
+                            <span class="emoji emoji-card" aria-hidden="true"
+                                >✍️</span
+                            >
+                        </h3>
+                        <p>
+                            Un code d'invitation suffit pour retrouver votre
+                            équipe. Vous préférez lancer votre propre groupe ?
+                            Créez-le en quelques clics et devenez capitaine.
+                            Vous pouvez même faire partie de plusieurs groupes !
+                        </p>
+                    </article>
+
+                    <article class="card-content">
+                        <h3>
+                            Relevez des défis, jour après jour<span
+                                class="emoji emoji-card"
+                                aria-hidden="true"
+                                >💪</span
+                            >
+                        </h3>
+                        <p>
+                            Un défi du jour, de la semaine ou du mois : votre
+                            capitaine fixe l’objectif et la durée. Vous n’avez
+                            qu’à saisir vos résultats, vos défis en cours vous
+                            attendent sur votre tableau de bord.
+                        </p>
+                    </article>
+
+                    <article class="card-content">
+                        <h3>
+                            Un classement fiable et équitable<span
+                                class="emoji emoji-card"
+                                aria-hidden="true"
+                                >🥇</span
+                            >
+                        </h3>
+                        <p>
+                            Chaque performance est validée par le capitaine
+                            avant de compter. Plus de résultats perdus dans une
+                            conversation, plus de classement à refaire à la main
+                            : tout est clair, juste et visible par votre groupe.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- INSCRIPTION AVEC UN FORMULAIRE -->
+            <section id="inscription">
+                <h2>Inscription</h2>
+                <form action="#" method="post">
+                    <!-- INFO PERSO -->
+                    <fieldset class="inscription">
+                        <legend>Informations personnelles</legend>
+                        <div class="champs">
+                            <div class="champ">
+                                <label for="name">Nom *</label>
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    required
+                                    minlength="2"
+                                    placeholder=" "
+                                    autocomplete="family-name"
+                                />
+                            </div>
+                            <div class="champ">
+                                <label for="firstname">Prénom *</label>
+                                <input
+                                    id="firstname"
+                                    name="firstname"
+                                    type="text"
+                                    required
+                                    minlength="2"
+                                    placeholder=" "
+                                    autocomplete="given-name"
+                                />
+                            </div>
+                            <div class="champ">
+                                <label for="email">Email *</label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    required
+                                    placeholder="votre-email@exemple.com"
+                                    aria-describedby="aide-email"
+                                    autocomplete="email"
+                                />
+                                <span id="aide-email" class="aide"
+                                    >Format : nom@domaine.fr</span
+                                >
+                            </div>
+                            <div class="champ">
+                                <label for="password">Mot de passe *</label>
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    required
+                                    placeholder=" "
+                                    pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+                                    title="8 caractères ou plus, au moins 1 majuscule et 1 chiffre"
+                                    aria-describedby="aide-password"
+                                    autocomplete="new-password"
+                                />
+                                <span id="aide-password" class="aide">
+                                    Minimum 8 caractères, 1 majuscule et 1
+                                    chiffre
+                                </span>
+                            </div>
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn btn-secondaire btn-form"
+                        >
+                            S'inscrire
+                        </button>
+                        <div class="donnees">
+                            <p class="donnees-titre">
+                                Protection de vos données personnelles
+                            </p>
+                            <p class="donnees-texte">
+                                Les informations recueillies via ce formulaire
+                                sont utilisées uniquement pour gérer votre
+                                inscription et vous permettre d'utiliser les
+                                fonctionnalités de ClubChallenge. Elles ne sont
+                                ni vendues ni transmises à des tiers. Vos
+                                données sont conservées pendant toute la durée
+                                de votre inscription. En cas de suppression de
+                                votre compte, vos données personnelles sont
+                                supprimées dans un délai de 30 jours, sauf
+                                obligation légale de conservation. Conformément
+                                au RGPD, vous pouvez demander l'accès, la
+                                rectification ou la suppression de vos données
+                                personnelles.
+                            </p>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-content">
+                <div>
+                    <p>Nos réseaux</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com" target="_blank"
+                            ><div class="reseau-container">
+                                <img
+                                    src="images/instagram.svg"
+                                    alt="logo Instagram"
+                                /></div
+                        ></a>
+                        <a href="https://www.facebook.com" target="_blank"
+                            ><div class="reseau-container">
+                                <img
+                                    src="images/facebook.svg"
+                                    alt="logo Facebook"
+                                /></div
+                        ></a>
+                        <a href="https://www.x.com" target="_blank"
+                            ><div class="reseau-container">
+                                <img src="images/x.svg" alt="logo X" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="#">Mentions légales</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <p>© ClubChallenge - 2026</p>
+            </div>
+        </footer>
+    </body>
+</html>
