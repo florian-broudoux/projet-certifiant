@@ -1,0 +1,19 @@
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
+
+const racine = dirname(fileURLToPath(import.meta.url));
+
+export default defineConfig({
+    base: './',
+    plugins: [tailwindcss()],
+    server: { host: true, watch: { usePolling: process.env.DANS_DOCKER === 'oui' } },
+    build: {
+        rolldownOptions: {
+            input: {
+                accueil: resolve(racine, 'index.html'),
+            },
+        },
+    },
+});
